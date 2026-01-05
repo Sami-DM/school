@@ -1,1 +1,262 @@
-<h1>Progress</h1>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Liceum Ogólnokształcące im. Mikołaja Kopernika w Toruniu</title>
+    <meta name="description" content="I Liceum Ogólnokształcące im. Mikołaja Kopernika w Toruniu — 457 lat tradycji. Złota Tarcza Perspektyw 2025. Akredytacja Erasmus+. Dołącz do Jedynki!">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/logos/favicon.ico">
+</head>
+<body>
+    <!-- Top bar with coat of arms and search -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="coat-of-arms">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="coat-of-arms-poland">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum" class="coat-of-arms-school">
+                <span class="school-name-short">I LO Kopernika</span>
+                <span class="school-name-full">I Liceum Ogólnokształcące im. Mikołaja Kopernika</span>
+            </div>
+            
+            <div class="top-bar-right">
+                <div class="search-container">
+                    <button class="search-icon" aria-label="Otwórz wyszukiwarkę">🔍</button>
+                    <div class="search-overlay" id="searchOverlay">
+                        <input type="search" id="searchInput" placeholder="Szukaj na stronie..." aria-label="Wpisz szukaną frazę">
+                        <button type="button" id="searchSubmit">Szukaj</button>
+                        <button type="button" id="searchClose" aria-label="Zamknij wyszukiwarkę">✕</button>
+                    </div>
+                </div>
+                <a href="/bip" class="bip-link">BIP</a>
+                <div class="accessibility-placeholder">
+                    <!-- Reserved for accessibility buttons -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main header with navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <!-- Logo for mobile -->
+            <div class="mobile-logo">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum">
+                <span>I LO Kopernika</span>
+            </div>
+
+            <!-- Mobile menu toggle -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Otwórz/zamknij menu">
+            <label for="menu-toggle" class="menu-toggle-label">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <!-- Main navigation -->
+            <nav class="main-nav" aria-label="Główne menu">
+                <ul class="main-menu">
+                    <li><a href="/" class="active">Strona główna</a></li>
+                    <li><a href="/rekrutacja">Rekrutacja</a></li>
+                    <li class="has-submenu">
+                        <a href="/o-szkole">O szkole</a>
+                        <ul class="submenu">
+                            <li><a href="/o-szkole/o-nas">O nas</a></li>
+                            <li><a href="/o-szkole/historia">Historia</a></li>
+                            <li><a href="/o-szkole/kadra">Kadra</a></li>
+                            <li><a href="/o-szkole/biblioteka">Biblioteka</a></li>
+                            <li><a href="/o-szkole/projekty">Projekty międzynarodowe</a></li>
+                            <li><a href="/o-szkole/dzialania">Działania Jedynki</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/dla-ucznia">Dla ucznia</a>
+                        <ul class="submenu">
+                            <li><a href="/plan-lekcji">Plan lekcji</a></li>
+                            <li><a href="https://vulcan.net.pl/torun">Dziennik</a></li>
+                            <li><a href="/podreczniki">Podręczniki</a></li>
+                            <li><a href="/niezbednik">Niezbędnik</a></li>
+                            <li><a href="/pomoc">Pomoc psychologiczno-pedagogiczna</a></li>
+                            <li><a href="/zfss">ZFŚS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/matura">Matura</a></li>
+                    <li><a href="/kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero section -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-container">
+            <h1 class="hero-title">Witaj w Jedynce Kopernika</h1>
+            <p class="hero-subtitle">457 lat tradycji. Liceum z nowoczesnym podejściem do edukacji.</p>
+            <div class="hero-buttons">
+                <a href="/rekrutacja" class="btn-primary">Rekrutacja 2026/2027</a>
+                <a href="/o-szkole" class="btn-secondary">Poznaj naszą ofertę</a>
+            </div>
+        </div>
+    </section>
+
+    <main class="container main-content">
+        <!-- About school section -->
+        <section class="section about-section">
+            <h2 class="section-title">O SZKOLE</h2>
+            <div class="about-content">
+                <h3>I Liceum Ogólnokształcące im. Mikołaja Kopernika</h3>
+                <p>Najstarsze liceum w Toruniu — 457 lat tradycji połączonej z nowoczesnością.</p>
+                <p>Jesteśmy szkołą wyróżnioną <strong>Złotą Tarczą w Rankingu Perspektyw 2025</strong> i posiadamy <strong>Akredytację Erasmus+ na lata 2022-2027</strong>.</p>
+                <p>W Jedynce najważniejsze są: wiedza, umiejętności, rozwijanie pasji i relacje. Przygotowujemy uczniów nie tylko do studiów, ale też do satysfakcjonującego odnalezienia się we współczesnym świecie.</p>
+                <p>Dołącz do społeczności, która tworzy historię każdego dnia.</p>
+                <a href="/o-szkole" class="btn-primary">Poznaj nas bliżej</a>
+            </div>
+        </section>
+
+        <!-- Quick links section -->
+        <section class="section quick-links-section">
+            <h2 class="section-title">Szybkie linki</h2>
+            <div class="quick-links-grid">
+                <a href="/rekrutacja" class="quick-link-card">Rekrutacja 2026/2027</a>
+                <a href="/erasmus" class="quick-link-card">Akredytacja Erasmus+</a>
+                <a href="/tomun" class="quick-link-card">ToMUN</a>
+                <a href="/plan-lekcji" class="quick-link-card">Plan lekcji</a>
+                <a href="https://vulcan.net.pl/torun" class="quick-link-card">Dziennik</a>
+                <a href="/biblioteka" class="quick-link-card">Biblioteka</a>
+                <a href="/dokumenty" class="quick-link-card">Dokumenty</a>
+                <a href="/kontakt" class="quick-link-card">Kontakt</a>
+            </div>
+        </section>
+
+        <!-- News section -->
+        <section class="section news-section">
+            <h2 class="section-title">Aktualności</h2>
+            <div class="news-grid">
+                <article class="news-card">
+                    <div class="news-card-content">
+                        <h3 class="news-title">Dzień Otwarty 2026</h3>
+                        <time class="news-date" datetime="2026-03-15">15 marca 2026</time>
+                        <p class="news-excerpt">Zapraszamy wszystkich ósmoklasistów i ich rodziców na Dzień Otwarty Jedynki. Poznajcie naszą szkołę od środka!</p>
+                        <a href="/aktualnosci/dzien-otwarty" class="news-read-more">Czytaj więcej</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-card-content">
+                        <h3 class="news-title">Sukces w Olimpiadzie Historycznej</h3>
+                        <time class="news-date" datetime="2026-02-28">28 lutego 2026</time>
+                        <p class="news-excerpt">Uczeń klasy 3c, Jan Kowalski, zdobył tytuł laureata Olimpiady Historycznej. Gratulujemy!</p>
+                        <a href="/aktualnosci/olimpiada-historyczna" class="news-read-more">Czytaj więcej</a>
+                    </div>
+                </article>
+                
+                <article class="news-card">
+                    <div class="news-card-content">
+                        <h3 class="news-title">Wymiana z Portugalią</h3>
+                        <time class="news-date" datetime="2026-02-20">20 lutego 2026</time>
+                        <p class="news-excerpt">Grupa uczniów z programu Erasmus+ wróciła z wymiany w Lizbonie. Relacja i fotografie.</p>
+                        <a href="/aktualnosci/wymiana-portugalia" class="news-read-more">Czytaj więcej</a>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="news-footer">
+                <a href="/aktualnosci" class="btn-secondary">Zobacz wszystkie aktualności</a>
+                <div class="archive-dropdown">
+                    <select aria-label="Wybierz miesiąc archiwum">
+                        <option value="">Archiwum</option>
+                        <option value="2026-03">Marzec 2026</option>
+                        <option value="2026-02">Luty 2026</option>
+                        <option value="2026-01">Styczeń 2026</option>
+                    </select>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements section -->
+        <section class="section achievements-section">
+            <h2 class="section-title">Nasze sukcesy</h2>
+            <div class="achievements-grid">
+                <article class="achievement-card">
+                    <div class="achievement-icon">🏆</div>
+                    <h3 class="achievement-title">Złota Tarcza Perspektyw 2025</h3>
+                    <p class="achievement-description">Wyróżnienie w Rankingu Liceów Ogólnokształcących za wysoki poziom nauczania.</p>
+                </article>
+                
+                <article class="achievement-card">
+                    <div class="achievement-icon">🌍</div>
+                    <h3 class="achievement-title">Akredytacja Erasmus+ 2022-2027</h3>
+                    <p class="achievement-description">Mobilności do Hiszpanii, Portugali, Holandii, Belgii i Luksemburga.</p>
+                </article>
+                
+                <article class="achievement-card">
+                    <div class="achievement-icon">🎓</div>
+                    <h3 class="achievement-title">Wysoka Edukacyjna Wartość Dodana</h3>
+                    <p class="achievement-description">Uczniowie osiągają znaczący przyrost wiedzy w porównaniu do punktów wyjściowych.</p>
+                </article>
+            </div>
+            <div class="achievements-footer">
+                <a href="/sukcesy" class="btn-secondary">Zobacz wszystkie osiągnięcia</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="footer-coat-of-arms">
+                <h3>I Liceum Ogólnokształcące<br>im. Mikołaja Kopernika</h3>
+                <address>
+                    ul. Kopernika 1<br>
+                    87-100 Toruń<br>
+                    <a href="tel:+48556677889">+48 55 667 78 89</a><br>
+                    <a href="mailto:sekretariat@lo1.torun.pl">sekretariat@lo1.torun.pl</a>
+                </address>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Menu</h4>
+                <ul class="footer-menu">
+                    <li><a href="/">Strona główna</a></li>
+                    <li><a href="/rekrutacja">Rekrutacja</a></li>
+                    <li><a href="/o-szkole">O szkole</a></li>
+                    <li><a href="/dla-ucznia">Dla ucznia</a></li>
+                    <li><a href="/matura">Matura</a></li>
+                    <li><a href="/kontakt">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Dokumenty</h4>
+                <ul class="footer-menu">
+                    <li><a href="/statut">Statut szkoły</a></li>
+                    <li><a href="/wso">WSO</a></li>
+                    <li><a href="/plan-lekcji">Plan lekcji</a></li>
+                    <li><a href="/dokumenty">Dokumenty do pobrania</a></li>
+                    <li><a href="/bip">BIP</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Social media</h4>
+                <div class="social-links">
+                    <a href="https://facebook.com/lo1torun" aria-label="Facebook">Facebook</a>
+                    <a href="https://instagram.com/lo1torun" aria-label="Instagram">Instagram</a>
+                    <a href="https://youtube.com/lo1torun" aria-label="YouTube">YouTube</a>
+                </div>
+                <p class="copyright">© 2026 I LO im. M. Kopernika w Toruniu<br>Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
