@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - I LO im. M. Kopernika w Toruniu</title>
+    <meta name="description" content="Skontaktuj się z I Liceum Ogólnokształcącym im. Mikołaja Kopernika w Toruniu. Adres, telefon, e-mail, godziny pracy sekretariatu.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/logos/favicon.ico">
+</head>
+<body>
+    <!-- Top bar (same as index.html) -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="coat-of-arms">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="coat-of-arms-poland">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum" class="coat-of-arms-school">
+                <span class="school-name-short">I LO Kopernika</span>
+                <span class="school-name-full">I Liceum Ogólnokształcące im. Mikołaja Kopernika</span>
+            </div>
+            
+            <div class="top-bar-right">
+                <div class="search-container">
+                    <button class="search-icon" aria-label="Otwórz wyszukiwarkę">🔍</button>
+                    <div class="search-overlay" id="searchOverlay" hidden>
+                        <input type="search" id="searchInput" placeholder="Szukaj na stronie..." aria-label="Wpisz szukaną frazę">
+                        <button type="button" id="searchSubmit">Szukaj</button>
+                        <button type="button" id="searchClose" aria-label="Zamknij wyszukiwarkę">✕</button>
+                    </div>
+                </div>
+                <a href="/bip" class="bip-link">BIP</a>
+                <div class="accessibility-placeholder">
+                    <!-- Reserved for accessibility buttons -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main header with navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="mobile-logo">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum">
+                <span>I LO Kopernika</span>
+            </div>
+
+            <div class="menu-toggle-label" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="main-nav" aria-label="Główne menu">
+                <ul class="main-menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="maintenance.html">Rekrutacja</a></li>
+                    <li><a href="o-szkole.html">O szkole</a></li>
+                    <li><a href="maintenance.html">Dla ucznia</a></li>
+                    <li><a href="maintenance.html">Matura</a></li>
+                    <li><a href="kontakt.html" class="active">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1 class="hero-title">Kontakt</h1>
+            <p class="hero-subtitle">Masz pytania? Skontaktuj się z nami!</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <main class="container">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>I Liceum Ogólnokształcące im. Mikołaja Kopernika</h2>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">
+                            <h3>Adres</h3>
+                            <p>ul. Zaułek Prosowy 1<br>87-100 Toruń</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-text">
+                            <h3>Telefon</h3>
+                            <p>56 622-79-33</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-text">
+                            <h3>E-mail</h3>
+                            <p>sekretariat@lo1.edu.torun.pl</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-hours">
+                    <h3>Godziny pracy sekretariatu:</h3>
+                    <p>Poniedziałek–Piątek: 8:00–15:00</p>
+                </div>
+            </div>
+            
+            <div class="contact-map">
+                <h2>Jak do nas trafić?</h2>
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2398.1234567890123!2d18.607456!3d53.013789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTPCsDAwJzQ5LjYiTiAxOMKwMzYnMjYuOCJF!5e0!3m2!1spl!2spl!4v1234567890123!5m2!1spl!2spl" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="footer-coat-of-arms">
+                <h3>I Liceum Ogólnokształcące<br>im. Mikołaja Kopernika</h3>
+                <address>
+                    ul. Kopernika 1<br>
+                    87-100 Toruń<br>
+                    <a href="tel:+48556677889">+48 55 667 78 89</a><br>
+                    <a href="mailto:sekretariat@lo1.torun.pl">sekretariat@lo1.torun.pl</a>
+                </address>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Menu</h4>
+                <ul class="footer-menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="maintenance.html">Rekrutacja</a></li>
+                    <li><a href="o-szkole.html">O szkole</a></li>
+                    <li><a href="maintenance.html">Dla ucznia</a></li>
+                    <li><a href="maintenance.html">Matura</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Dokumenty</h4>
+                <ul class="footer-menu">
+                    <li><a href="dokumenty.html">Statut szkoły</a></li>
+                    <li><a href="dokumenty.html">WSO</a></li>
+                    <li><a href="dokumenty.html">Plan lekcji</a></li>
+                    <li><a href="dokumenty.html">Dokumenty do pobrania</a></li>
+                    <li><a href="dokumenty.html">BIP</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Social media</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/1lo.torun/" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://www.instagram.com/jedynkalo/" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://twitter.com/1lotorun/" aria-label="Twitter" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://www.tiktok.com/@ilotorun" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
+                    <a href="https://www.youtube.com/playlist?list=PLi3Vi7I5bT9Wuj6xYfnjpZS90qdz9r85e" aria-label="YouTube" target="_blank" rel="noopener">YouTube</a>
+                </div>
+                <p class="copyright">© 2026 I LO im. M. Kopernika w Toruniu<br>Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

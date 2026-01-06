@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O szkole - I LO im. M. Kopernika w Toruniu</title>
+    <meta name="description" content="Poznaj I Liceum Ogólnokształcące im. Mikołaja Kopernika w Toruniu - 457 lat tradycji, nowoczesna edukacja, międzynarodowe projekty.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/logos/favicon.ico">
+</head>
+<body>
+    <!-- Top bar (same as index.html) -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="coat-of-arms">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="coat-of-arms-poland">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum" class="coat-of-arms-school">
+                <span class="school-name-short">I LO Kopernika</span>
+                <span class="school-name-full">I Liceum Ogólnokształcące im. Mikołaja Kopernika</span>
+            </div>
+            
+            <div class="top-bar-right">
+                <div class="search-container">
+                    <button class="search-icon" aria-label="Otwórz wyszukiwarkę">🔍</button>
+                    <div class="search-overlay" id="searchOverlay" hidden>
+                        <input type="search" id="searchInput" placeholder="Szukaj na stronie..." aria-label="Wpisz szukaną frazę">
+                        <button type="button" id="searchSubmit">Szukaj</button>
+                        <button type="button" id="searchClose" aria-label="Zamknij wyszukiwarkę">✕</button>
+                    </div>
+                </div>
+                <a href="/bip" class="bip-link">BIP</a>
+                <div class="accessibility-placeholder">
+                    <!-- Reserved for accessibility buttons -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main header with navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="mobile-logo">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum">
+                <span>I LO Kopernika</span>
+            </div>
+
+            <div class="menu-toggle-label" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="main-nav" aria-label="Główne menu">
+                <ul class="main-menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="maintenance.html">Rekrutacja</a></li>
+                    <li><a href="o-szkole.html" class="active">O szkole</a></li>
+                    <li><a href="maintenance.html">Dla ucznia</a></li>
+                    <li><a href="maintenance.html">Matura</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1 class="hero-title">O szkole</h1>
+            <p class="hero-subtitle">457 lat tradycji. Nowoczesna edukacja. Społeczność, która tworzy historię każdego dnia.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Kim jesteśmy Section -->
+        <section class="section">
+            <h2 class="section-title">Kim jesteśmy?</h2>
+            <div class="about-content">
+                <h3>I Liceum Ogólnokształcące im. Mikołaja Kopernika</h3>
+                <p>Najstarsze liceum w Toruniu, założone w 1568 roku. Łączymy wielowiekową tradycję z nowoczesnością, przygotowując uczniów do odnoszenia sukcesów nie tylko na uczelniach, ale i w życiu.</p>
+                
+                <p>W Jedynce najważniejsze są cztery filary:</p>
+                
+                <div class="pillars-grid">
+                    <div class="pillar-card">
+                        <div class="pillar-icon">📚</div>
+                        <h3>WIEDZA</h3>
+                        <p>wysoki poziom nauczania potwierdzony Złotą Tarczą w Rankingu Perspektyw</p>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">🌍</div>
+                        <h3>UMIEJĘTNOŚCI</h3>
+                        <p>projekty międzynarodowe, olimpiady, współpraca z UMK</p>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">🎯</div>
+                        <h3>ROZWIJANIE PASJI</h3>
+                        <p>życie artystyczne, sportowe, działalność ekologiczna</p>
+                    </div>
+                    
+                    <div class="pillar-card">
+                        <div class="pillar-icon">🤝</div>
+                        <h3>RELACJE</h3>
+                        <p>atmosfera wsparcia, otwartości i wzajemnego szacunku</p>
+                    </div>
+                </div>
+                
+                <a href="#wyróżnienia" class="btn-primary mt-40">Zobacz nasze osiągnięcia</a>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Nasze wyróżnienia Section -->
+        <section id="wyróżnienia" class="section">
+            <h2 class="section-title">Nasze wyróżnienia</h2>
+            
+            <div class="distinctions-grid">
+                <article class="distinction-card">
+                    <div class="distinction-icon">🏆</div>
+                    <h3>Złota Tarcza w Rankingu Perspektyw</h3>
+                    <p>Wyróżnienie w latach 2025, 2024, 2023, 2022, 2021 za wysoki poziom nauczania i Edukacyjną Wartość Dodaną.</p>
+                </article>
+                
+                <article class="distinction-card">
+                    <div class="distinction-icon">🌍</div>
+                    <h3>Akredytacja Erasmus+ 2022-2027</h3>
+                    <p>Mobilności uczniów i nauczycieli do Hiszpanii, Portugalii, Holandii, Belgii i Luksemburga.</p>
+                </article>
+                
+                <article class="distinction-card">
+                    <div class="distinction-icon">🎓</div>
+                    <h3>Wysoka Edukacyjna Wartość Dodana</h3>
+                    <p>Uczniowie osiągają znaczący przyrost wiedzy w porównaniu do poziomu wyjściowego.</p>
+                </article>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Projekty międzynarodowe Section -->
+        <section class="section">
+            <h2 class="section-title">Projekty międzynarodowe</h2>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>🌐 Europroject Network</h3>
+                    <p>Jesteśmy aktywnym członkiem organizacji zrzeszającej 19 szkół z Europy. Uczestniczymy w corocznej konferencji i wymianie dobrych praktyk.</p>
+                </div>
+                
+                <div class="project-card">
+                    <h3>🗣️ ToMUN — Toruń Model United Nations</h3>
+                    <p>Organizujemy coroczną konferencję Model United Nations, na której uczniowie wcielają się w rolę dyplomatów i dyskutują o globalnych problemach.</p>
+                    
+                    <p>Nasi uczniowie biorą udział w konferencjach:</p>
+                    <ul class="project-list">
+                        <li>LeMUN (Leiden, Holandia)</li>
+                        <li>ZaMUN (Žilina, Słowacja)</li>
+                        <li>NaMUN (Namur, Belgia)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="project-card">
+                <h3>🇺🇸 Wymiana z USA</h3>
+                <p>Prowadzimy wymianę uczniów z Science Leadership Academy z Filadelfii.</p>
+            </div>
+            
+            <div class="text-center mt-40">
+                <a href="maintenance.html" class="btn-primary">Dowiedz się więcej o projektach</a>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Działania Jedynki Section -->
+        <section class="section">
+            <h2 class="section-title">Działania Jedynki</h2>
+            
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <h3>🌱 Zielona Jedynka — Klub Ekologiczny</h3>
+                    <p>Działamy proekologicznie: segregacja śmieci, poidełko z filtrowaną wodą, szafa z ubraniami, cykliczne akcje (Wigilia bez Plastiku, Dzień Ziemi), współpraca z lokalnymi organizacjami.</p>
+                </div>
+                
+                <div class="activity-card">
+                    <h3>🐾 Jedynka Schodzi na Psy i Koty</h3>
+                    <p>Grupa miłośników zwierząt organizuje akcje charytatywne wspierające Miejskie Schronisko dla Zwierząt w Toruniu i fundację Kociniec.</p>
+                </div>
+                
+                <div class="activity-card">
+                    <h3>🎭 Życie artystyczne</h3>
+                    <p>Koncerty (Zaduszkowy, Walentynkowy, Piosenki Polskiej), musicale, spektakle teatralne, wystawy plastyczne. Wszystko na wysokim poziomie artystycznym!</p>
+                </div>
+                
+                <div class="activity-card">
+                    <h3>⚽ Sport i aktywność</h3>
+                    <p>Lekcje WF dla wszystkich poziomów sprawności, rywalizacja międzyszkolna, obozy narciarsko-snowboardowe (od 28 lat!), spływy kajakowe.</p>
+                </div>
+                
+                <div class="activity-card">
+                    <h3>📚 Biblioteka Szkolna</h3>
+                    <p>Akcje czytelnicze, spotkania autorskie, Klub Książki I LO. Odnowiona przestrzeń sprzyja nauce i relaksowi.</p>
+                </div>
+                
+                <div class="activity-card">
+                    <h3>🎓 Olimpiada Zwolnieni z Teorii</h3>
+                    <p>Uczniowie zdobywają doświadczenie, międzynarodowe certyfikaty i nagrody przez realizację projektów społecznych.</p>
+                </div>
+                
+                <div class="activity-card">
+                    <h3>❤️ Akcje charytatywne</h3>
+                    <p>Szlachetna Paczka, krwiodawstwo, Maraton Pisania Listów Amnesty International.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Kadra Section -->
+    <section class="staff-section">
+        <div class="container">
+            <div class="staff-content">
+                <h2 class="section-title">Kadra pedagogiczna</h2>
+                <p>Naszych uczniów kształci doświadczony zespół nauczycieli — specjalistów w swoich dziedzinach, którzy łączą wiedzę merytoryczną z pasją do nauczania.</p>
+                <a href="maintenance.html" class="btn-primary mt-40">Zobacz pełną listę kadry</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="footer-coat-of-arms">
+                <h3>I Liceum Ogólnokształcące<br>im. Mikołaja Kopernika</h3>
+                <address>
+                    ul. Kopernika 1<br>
+                    87-100 Toruń<br>
+                    <a href="tel:+48556677889">+48 55 667 78 89</a><br>
+                    <a href="mailto:sekretariat@lo1.torun.pl">sekretariat@lo1.torun.pl</a>
+                </address>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Menu</h4>
+                <ul class="footer-menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="maintenance.html">Rekrutacja</a></li>
+                    <li><a href="o-szkole.html">O szkole</a></li>
+                    <li><a href="maintenance.html">Dla ucznia</a></li>
+                    <li><a href="maintenance.html">Matura</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Dokumenty</h4>
+                <ul class="footer-menu">
+                    <li><a href="dokumenty.html">Statut szkoły</a></li>
+                    <li><a href="dokumenty.html">WSO</a></li>
+                    <li><a href="dokumenty.html">Plan lekcji</a></li>
+                    <li><a href="dokumenty.html">Dokumenty do pobrania</a></li>
+                    <li><a href="dokumenty.html">BIP</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Social media</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/1lo.torun/" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://www.instagram.com/jedynkalo/" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://twitter.com/1lotorun/" aria-label="Twitter" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://www.tiktok.com/@ilotorun" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
+                    <a href="https://www.youtube.com/playlist?list=PLi3Vi7I5bT9Wuj6xYfnjpZS90qdz9r85e" aria-label="YouTube" target="_blank" rel="noopener">YouTube</a>
+                </div>
+                <p class="copyright">© 2026 I LO im. M. Kopernika w Toruniu<br>Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aktualności - I LO im. M. Kopernika w Toruniu</title>
+    <meta name="description" content="Najnowsze aktualności z życia I Liceum Ogólnokształcącego im. Mikołaja Kopernika w Toruniu.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/logos/favicon.ico">
+</head>
+<body>
+    <!-- Top bar (same as index.html) -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="coat-of-arms">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="coat-of-arms-poland">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum" class="coat-of-arms-school">
+                <span class="school-name-short">I LO Kopernika</span>
+                <span class="school-name-full">I Liceum Ogólnokształcące im. Mikołaja Kopernika</span>
+            </div>
+            
+            <div class="top-bar-right">
+                <div class="search-container">
+                    <button class="search-icon" aria-label="Otwórz wyszukiwarkę">🔍</button>
+                    <div class="search-overlay" id="searchOverlay" hidden>
+                        <input type="search" id="searchInput" placeholder="Szukaj na stronie..." aria-label="Wpisz szukaną frazę">
+                        <button type="button" id="searchSubmit">Szukaj</button>
+                        <button type="button" id="searchClose" aria-label="Zamknij wyszukiwarkę">✕</button>
+                    </div>
+                </div>
+                <a href="dokumenty.html" class="bip-link">BIP</a>
+                <div class="accessibility-placeholder">
+                    <!-- Reserved for accessibility buttons -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main header with navigation -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="mobile-logo">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum">
+                <span>I LO Kopernika</span>
+            </div>
+
+            <div class="menu-toggle-label" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="main-nav" aria-label="Główne menu">
+                <ul class="main-menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="maintenance.html">Rekrutacja</a></li>
+                    <li><a href="o-szkole.html">O szkole</a></li>
+                    <li><a href="maintenance.html">Dla ucznia</a></li>
+                    <li><a href="maintenance.html">Matura</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="news-hero">
+        <div class="container">
+            <h1 class="hero-title">Aktualności</h1>
+            <p class="hero-subtitle">Co nowego w Jedynce?</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Filter Section -->
+        <section class="news-filter">
+            <select class="filter-dropdown" aria-label="Wybierz miesiąc">
+                <option value="">Wybierz miesiąc</option>
+                <option value="2025-12">grudzień 2025</option>
+                <option value="2025-11">listopad 2025</option>
+                <option value="2025-10">październik 2025</option>
+                <option value="2025-09">wrzesień 2025</option>
+                <option value="2025-08">sierpień 2025</option>
+                <option value="2025-07">lipiec 2025</option>
+            </select>
+        </section>
+
+        <!-- News List -->
+        <section class="news-list">
+            <div class="news-list-grid">
+                <!-- News Item 1 -->
+                <article class="news-list-item">
+                    <div class="news-image">
+                        [Miniaturka zdjęcia]
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">20.12.2025</span>
+                            <span class="news-category">Wydarzenie</span>
+                        </div>
+                        <h3 class="news-title">Dzień Otwarty 2026</h3>
+                        <p class="news-excerpt">Zapraszamy wszystkich ósmoklasistów i ich rodziców na Dzień Otwarty Jedynki. Poznajcie naszą szkołę od środka, porozmawiajcie z nauczycielami i uczniami.</p>
+                        <a href="maintenance.html" class="news-read-more">Czytaj więcej →</a>
+                    </div>
+                </article>
+                
+                <!-- News Item 2 -->
+                <article class="news-list-item">
+                    <div class="news-image">
+                        [Miniaturka zdjęcia]
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">15.12.2025</span>
+                            <span class="news-category">Olimpiada</span>
+                        </div>
+                        <h3 class="news-title">Sukces w Olimpiadzie Historycznej</h3>
+                        <p class="news-excerpt">Uczeń klasy 3c, Jan Kowalski, zdobył tytuł laureata Olimpiady Historycznej. Gratulujemy wspaniałego osiągnięcia!</p>
+                        <a href="maintenance.html" class="news-read-more">Czytaj więcej →</a>
+                    </div>
+                </article>
+                
+                <!-- News Item 3 -->
+                <article class="news-list-item">
+                    <div class="news-image">
+                        [Miniaturka zdjęcia]
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">10.12.2025</span>
+                            <span class="news-category">Erasmus+</span>
+                        </div>
+                        <h3 class="news-title">Wymiana z Portugalią</h3>
+                        <p class="news-excerpt">Grupa uczniów z programu Erasmus+ wróciła z wymiany w Lizbonie. Relacja i fotografie z pobytu już dostępne.</p>
+                        <a href="maintenance.html" class="news-read-more">Czytaj więcej →</a>
+                    </div>
+                </article>
+                
+                <!-- News Item 4 -->
+                <article class="news-list-item">
+                    <div class="news-image">
+                        [Miniaturka zdjęcia]
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">05.12.2025</span>
+                            <span class="news-category">Szkolne życie</span>
+                        </div>
+                        <h3 class="news-title">Koncert Walentynkowy 2026</h3>
+                        <p class="news-excerpt">Ruszyły zapisy na Koncert Walentynkowy. Zapraszamy wszystkie utalentowane osoby do zgłaszania swoich występów.</p>
+                        <a href="maintenance.html" class="news-read-more">Czytaj więcej →</a>
+                    </div>
+                </article>
+                
+                <!-- News Item 5 -->
+                <article class="news-list-item">
+                    <div class="news-image">
+                        [Miniaturka zdjęcia]
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">30.11.2025</span>
+                            <span class="news-category">Projekt</span>
+                        </div>
+                        <h3 class="news-title">ToMUN 2026 - rekrutacja</h3>
+                        <p class="news-excerpt">Rozpoczynamy rekrutację na konferencję Model United Nations. To doskonała okazja do rozwoju umiejętności dyplomatycznych.</p>
+                        <a href="maintenance.html" class="news-read-more">Czytaj więcej →</a>
+                    </div>
+                </article>
+                
+                <!-- News Item 6 -->
+                <article class="news-list-item">
+                    <div class="news-image">
+                        [Miniaturka zdjęcia]
+                    </div>
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="news-date">25.11.2025</span>
+                            <span class="news-category">Sport</span>
+                        </div>
+                        <h3 class="news-title">Mistrzostwa szkoły w pływaniu</h3>
+                        <p class="news-excerpt">Zapraszamy na mistrzostwa szkoły w pływaniu. Zgłoszenia przyjmowane są do 10 grudnia u nauczycieli WF.</p>
+                        <a href="maintenance.html" class="news-read-more">Czytaj więcej →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pagination -->
+        <nav class="pagination" aria-label="Nawigacja między stronami">
+            <a href="#" class="page-nav disabled" aria-label="Poprzednia strona">← Poprzednie</a>
+            
+            <a href="#" class="page-link active" aria-label="Strona 1" aria-current="page">1</a>
+            <a href="#" class="page-link" aria-label="Strona 2">2</a>
+            <a href="#" class="page-link" aria-label="Strona 3">3</a>
+            <a href="#" class="page-link" aria-label="Strona 4">4</a>
+            <a href="#" class="page-link" aria-label="Strona 5">5</a>
+            
+            <a href="#" class="page-nav" aria-label="Następna strona">Następne →</a>
+        </nav>
+    </main>
+
+    <!-- Footer (same as index.html) -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="footer-coat-of-arms">
+                <h3>I Liceum Ogólnokształcące<br>im. Mikołaja Kopernika</h3>
+                <address>
+                    ul. Kopernika 1<br>
+                    87-100 Toruń<br>
+                    <a href="tel:+48556677889">+48 55 667 78 89</a><br>
+                    <a href="mailto:sekretariat@lo1.torun.pl">sekretariat@lo1.torun.pl</a>
+                </address>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Menu</h4>
+                <ul class="footer-menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="maintenance.html">Rekrutacja</a></li>
+                    <li><a href="o-szkole.html">O szkole</a></li>
+                    <li><a href="maintenance.html">Dla ucznia</a></li>
+                    <li><a href="maintenance.html">Matura</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Dokumenty</h4>
+                <ul class="footer-menu">
+                    <li><a href="dokumenty.html">Statut szkoły</a></li>
+                    <li><a href="dokumenty.html">WSO</a></li>
+                    <li><a href="dokumenty.html">Plan lekcji</a></li>
+                    <li><a href="dokumenty.html">Dokumenty do pobrania</a></li>
+                    <li><a href="dokumenty.html">BIP</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Social media</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/1lo.torun/" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://www.instagram.com/jedynkalo/" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://twitter.com/1lotorun/" aria-label="Twitter" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://www.tiktok.com/@ilotorun" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
+                    <a href="https://www.youtube.com/playlist?list=PLi3Vi7I5bT9Wuj6xYfnjpZS90qdz9r85e" aria-label="YouTube" target="_blank" rel="noopener">YouTube</a>
+                </div>
+                <p class="copyright">© 2026 I LO im. M. Kopernika w Toruniu<br>Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
