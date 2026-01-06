@@ -12,9 +12,14 @@
     
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" type="image/x-icon" href="assets/logos/favicon.ico">
+    <style>
+        .news-hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <!-- Top bar with coat of arms and search -->
+    <!-- Top bar -->
     <div class="top-bar">
         <div class="container top-bar-container">
             <div class="coat-of-arms">
@@ -41,7 +46,7 @@
         </div>
     </div>
 
-    <!-- Main header with navigation -->
+    <!-- Main header -->
     <header class="main-header">
         <div class="container header-container">
             <div class="mobile-logo">
@@ -59,8 +64,28 @@
                 <ul class="main-menu">
                     <li><a href="index.html">Strona główna</a></li>
                     <li><a href="maintenance.html">Rekrutacja</a></li>
-                    <li><a href="o-szkole.html">O szkole</a></li>
-                    <li><a href="maintenance.html">Dla ucznia</a></li>
+                    <li class="has-submenu">
+                        <a href="o-szkole.html">O szkole</a>
+                        <ul class="submenu">
+                            <li><a href="o-szkole.html">O nas</a></li>
+                            <li><a href="o-szkole.html#wyróżnienia">Historia</a></li>
+                            <li><a href="maintenance.html">Kadra</a></li>
+                            <li><a href="maintenance.html">Biblioteka</a></li>
+                            <li><a href="maintenance.html">Projekty międzynarodowe</a></li>
+                            <li><a href="maintenance.html">Działania Jedynki</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="maintenance.html">Dla ucznia</a>
+                        <ul class="submenu">
+                            <li><a href="maintenance.html">Plan lekcji</a></li>
+                            <li><a href="https://vulcan.net.pl/torun">Dziennik</a></li>
+                            <li><a href="maintenance.html">Podręczniki</a></li>
+                            <li><a href="maintenance.html">Niezbędnik</a></li>
+                            <li><a href="maintenance.html">Pomoc psychologiczno-pedagogiczna</a></li>
+                            <li><a href="maintenance.html">ZFŚS</a></li>
+                        </ul>
+                    </li>
                     <li><a href="maintenance.html">Matura</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
@@ -79,28 +104,26 @@
     <main class="container">
         <!-- Filter Section -->
         <section class="news-filter">
-            <select class="filter-dropdown" aria-label="Wybierz miesiąc">
-                <option value="">Wybierz miesiąc</option>
-                <option value="2025-12">grudzień 2025</option>
-                <option value="2025-11">listopad 2025</option>
-                <option value="2025-10">październik 2025</option>
-                <option value="2025-09">wrzesień 2025</option>
-                <option value="2025-08">sierpień 2025</option>
-                <option value="2025-07">lipiec 2025</option>
+            <select class="filter-dropdown" id="newsFilter" aria-label="Wybierz miesiąc">
+                <option value="all">Wszystkie aktualności</option>
+                <option value="2026-03">Marzec 2026</option>
+                <option value="2026-02">Luty 2026</option>
+                <option value="2026-01">Styczeń 2026</option>
+                <option value="2025-12">Grudzień 2025</option>
             </select>
         </section>
 
         <!-- News List -->
         <section class="news-list">
-            <div class="news-list-grid">
+            <div class="news-list-grid" id="newsContainer">
                 <!-- News Item 1 -->
-                <article class="news-list-item">
+                <article class="news-list-item" data-month="2026-03">
                     <div class="news-image">
                         [Miniaturka zdjęcia]
                     </div>
                     <div class="news-content">
                         <div class="news-meta">
-                            <span class="news-date">20.12.2025</span>
+                            <span class="news-date">15.03.2026</span>
                             <span class="news-category">Wydarzenie</span>
                         </div>
                         <h3 class="news-title">Dzień Otwarty 2026</h3>
@@ -110,13 +133,13 @@
                 </article>
                 
                 <!-- News Item 2 -->
-                <article class="news-list-item">
+                <article class="news-list-item" data-month="2026-02">
                     <div class="news-image">
                         [Miniaturka zdjęcia]
                     </div>
                     <div class="news-content">
                         <div class="news-meta">
-                            <span class="news-date">15.12.2025</span>
+                            <span class="news-date">28.02.2026</span>
                             <span class="news-category">Olimpiada</span>
                         </div>
                         <h3 class="news-title">Sukces w Olimpiadzie Historycznej</h3>
@@ -126,13 +149,13 @@
                 </article>
                 
                 <!-- News Item 3 -->
-                <article class="news-list-item">
+                <article class="news-list-item" data-month="2026-02">
                     <div class="news-image">
                         [Miniaturka zdjęcia]
                     </div>
                     <div class="news-content">
                         <div class="news-meta">
-                            <span class="news-date">10.12.2025</span>
+                            <span class="news-date">20.02.2026</span>
                             <span class="news-category">Erasmus+</span>
                         </div>
                         <h3 class="news-title">Wymiana z Portugalią</h3>
@@ -142,13 +165,13 @@
                 </article>
                 
                 <!-- News Item 4 -->
-                <article class="news-list-item">
+                <article class="news-list-item" data-month="2026-01">
                     <div class="news-image">
                         [Miniaturka zdjęcia]
                     </div>
                     <div class="news-content">
                         <div class="news-meta">
-                            <span class="news-date">05.12.2025</span>
+                            <span class="news-date">15.01.2026</span>
                             <span class="news-category">Szkolne życie</span>
                         </div>
                         <h3 class="news-title">Koncert Walentynkowy 2026</h3>
@@ -158,13 +181,13 @@
                 </article>
                 
                 <!-- News Item 5 -->
-                <article class="news-list-item">
+                <article class="news-list-item" data-month="2025-12">
                     <div class="news-image">
                         [Miniaturka zdjęcia]
                     </div>
                     <div class="news-content">
                         <div class="news-meta">
-                            <span class="news-date">30.11.2025</span>
+                            <span class="news-date">10.12.2025</span>
                             <span class="news-category">Projekt</span>
                         </div>
                         <h3 class="news-title">ToMUN 2026 - rekrutacja</h3>
@@ -174,13 +197,13 @@
                 </article>
                 
                 <!-- News Item 6 -->
-                <article class="news-list-item">
+                <article class="news-list-item" data-month="2025-12">
                     <div class="news-image">
                         [Miniaturka zdjęcia]
                     </div>
                     <div class="news-content">
                         <div class="news-meta">
-                            <span class="news-date">25.11.2025</span>
+                            <span class="news-date">05.12.2025</span>
                             <span class="news-category">Sport</span>
                         </div>
                         <h3 class="news-title">Mistrzostwa szkoły w pływaniu</h3>
@@ -205,7 +228,7 @@
         </nav>
     </main>
 
-    <!-- Footer (same as index.html) -->
+    <!-- Footer -->
     <footer class="main-footer">
         <div class="container footer-container">
             <div class="footer-column">
@@ -256,6 +279,66 @@
         </div>
     </footer>
 
-    <script src="scripts/main.js"></script>
+    <script>
+        // News Filter Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filter = document.getElementById('newsFilter');
+            const newsItems = document.querySelectorAll('.news-list-item');
+            
+            if (filter) {
+                filter.addEventListener('change', function() {
+                    const selectedMonth = this.value;
+                    
+                    newsItems.forEach(item => {
+                        if (selectedMonth === 'all' || item.getAttribute('data-month') === selectedMonth) {
+                            item.classList.remove('news-hidden');
+                        } else {
+                            item.classList.add('news-hidden');
+                        }
+                    });
+                    
+                    // Обновляем пагинацию (в демо просто показываем сообщение)
+                    const visibleItems = document.querySelectorAll('.news-list-item:not(.news-hidden)');
+                    console.log(`Pokazano ${visibleItems.length} z ${newsItems.length} aktualności`);
+                });
+            }
+            
+            // Основной скрипт меню
+            const menuToggle = document.querySelector('.menu-toggle-label');
+            const mainNav = document.querySelector('.main-nav');
+            
+            if (menuToggle && mainNav) {
+                const menuClose = document.createElement('button');
+                menuClose.className = 'menu-close';
+                menuClose.innerHTML = '✕';
+                menuClose.setAttribute('aria-label', 'Zamknij menu');
+                mainNav.appendChild(menuClose);
+
+                menuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                    document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+                });
+
+                menuClose.addEventListener('click', function() {
+                    menuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+
+                // Mobile submenu toggle
+                const submenuParents = document.querySelectorAll('.has-submenu > a');
+                submenuParents.forEach(item => {
+                    item.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            const parent = this.parentElement;
+                            parent.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
 </body>
 </html>
