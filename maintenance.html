@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona w budowie - I LO im. Kopernika</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <style>
+        .maintenance {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            background-color: var(--color-bg);
+        }
+        
+        .maintenance-container {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .maintenance-icon {
+            font-size: 80px;
+            color: var(--color-accent);
+            margin-bottom: 30px;
+        }
+        
+        .maintenance-title {
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+        
+        .maintenance-text {
+            color: #888888;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .maintenance-phone {
+            display: block;
+            font-size: 1.5rem;
+            color: var(--color-primary);
+            margin: 20px 0;
+            font-weight: 700;
+        }
+        
+        .maintenance-hours {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="maintenance">
+        <div class="maintenance-container">
+            <div class="maintenance-icon">
+                ⚙️
+            </div>
+            
+            <h1 class="maintenance-title">Strona tymczasowo niedostępna</h1>
+            
+            <p class="maintenance-text">
+                Przepraszamy za niedogodności. Strona jest aktualizowana 
+                lub wystąpił tymczasowy problem techniczny.<br><br>
+                Spróbuj ponownie za chwilę lub skorzystaj z poniższych linków:
+            </p>
+            
+            <a href="/" class="btn-primary" style="margin-bottom: 30px;">
+                Strona główna
+            </a>
+            
+            <p class="maintenance-text">
+                Pilna sprawa?
+            </p>
+            
+            <a href="tel:+48566227933" class="maintenance-phone">
+                56 622-79-33
+            </a>
+            
+            <p class="maintenance-hours">
+                (poniedziałek-piątek, 8:00-15:00)
+            </p>
+            
+            <p>
+                <a href="/">I LO im. M. Kopernika w Toruniu</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
