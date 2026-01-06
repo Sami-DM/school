@@ -4,6 +4,57 @@
  */
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Mobile menu functionality
+    const menuToggle = document.querySelector('.menu-toggle-label');
+    const mainNav = document.querySelector('.main-nav');
+    
+    if (menuToggle && mainNav) {
+        // Add close button to mobile menu
+        const menuClose = document.createElement('button');
+        menuClose.className = 'menu-close';
+        menuClose.innerHTML = '✕';
+        menuClose.setAttribute('aria-label', 'Zamknij menu');
+        mainNav.appendChild(menuClose);
+        
+        // Toggle menu when burger icon is clicked
+        menuToggle.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mainNav.classList.toggle('active');
+            document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+        });
+        
+        // Close menu when close button is clicked
+        menuClose.addEventListener('click', function() {
+            menuToggle.classList.remove('active');
+            mainNav.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+        
+        // Close menu when clicking outside on mobile
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768 && 
+                mainNav.classList.contains('active') &&
+                !e.target.closest('.main-nav') && 
+                !e.target.closest('.menu-toggle-label')) {
+                menuToggle.classList.remove('active');
+                mainNav.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+        
+        // Mobile submenu toggle
+        const submenuParents = document.querySelectorAll('.has-submenu > a');
+        submenuParents.forEach(item => {
+            item.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const parent = this.parentElement;
+                    parent.classList.toggle('active');
+                }
+            });
+        });
+    }
+    
     // Search functionality
     const searchIcon = document.querySelector('.search-icon');
     const searchOverlay = document.getElementById('searchOverlay');
@@ -26,6 +77,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         
         // Search functionality
+        function performSearch() {
+            const query = searchInput.value.trim().toLowerCase();
+            
+            if (!query) {
+                alert('Proszę wpisać szukaną frazę');
+                return;
+            }
+            
+            // Simple search - highlight matching text
+            const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li');
+            let found = false;
+            
+            elements.forEach(el => {
+                const text = el.textContent.toLowerCase();
+                if (text.includes(query)) {
+                    found = true;
+                    // Scroll to first found element
+                    if (!window.searched) {
+                        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        window.searched = true;
+                    }
+                    
+                    // Highlight the element
+                    const originalHTML = el.innerHTML;
+                    const regex = new RegExp(`(${query})`, 'gi');
+                    el.innerHTML = originalHTML.replace(regex, '<mark>$1</mark>');
+                    
+                    // Remove highlight after 5 seconds
+                    setTimeout(() => {
+                        el.innerHTML = originalHTML;
+                    }, 5000);
+                }
+            });
+            
+            if (!found) {
+                alert('Nie znaleziono wyników dla: ' + query);
+            }
+            
+            searchOverlay.hidden = true;
+            window.searched = false;
+        }
+        
         searchSubmit.addEventListener('click', performSearch);
         searchInput.addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
@@ -42,75 +135,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
-    // Simple search function (basic DOM search)
-    function performSearch() {
-        const query = searchInput.value.trim().toLowerCase();
-        
-        if (!query) {
-            alert('Proszę wpisać szukaną frazę');
-            return;
-        }
-        
-        // Simple search - highlight matching text
-        const elements = document.querySelectorAll('h1, h2, h3, h4, h5, h6, p, li');
-        let found = false;
-        
-        elements.forEach(el => {
-            const text = el.textContent.toLowerCase();
-            if (text.includes(query)) {
-                found = true;
-                // Scroll to first found element
-                if (!window.searched) {
-                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    window.searched = true;
-                }
-                
-                // Highlight the element
-                const originalHTML = el.innerHTML;
-                const regex = new RegExp(`(${query})`, 'gi');
-                el.innerHTML = originalHTML.replace(regex, '<mark>$1</mark>');
-                
-                // Remove highlight after 5 seconds
-                setTimeout(() => {
-                    el.innerHTML = originalHTML;
-                }, 5000);
-            }
-        });
-        
-        if (!found) {
-            alert('Nie znaleziono wyników dla: ' + query);
-        }
-        
-        searchOverlay.hidden = true;
-        window.searched = false;
-    }
-    
-    // Mobile submenu toggle
-    const menuItemsWithSubmenu = document.querySelectorAll('.has-submenu > a');
-    
-    menuItemsWithSubmenu.forEach(item => {
-        item.addEventListener('click', function(e) {
-            if (window.innerWidth <= 768) {
-                e.preventDefault();
-                const parent = this.parentElement;
-                parent.classList.toggle('active');
-            }
-        });
-    });
-    
-    // Close mobile menu when clicking outside
-    const menuToggle = document.getElementById('menu-toggle');
-    
-    document.addEventListener('click', function(e) {
-        if (window.innerWidth <= 768 && 
-            menuToggle && 
-            menuToggle.checked &&
-            !e.target.closest('.main-nav') && 
-            !e.target.closest('.menu-toggle-label')) {
-            menuToggle.checked = false;
-        }
-    });
     
     // Add smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
