@@ -50,8 +50,26 @@ document.addEventListener('DOMContentLoaded', function() {
                     e.preventDefault();
                     const parent = this.parentElement;
                     parent.classList.toggle('active');
+                    
+                    // Закрываем другие открытые подменю
+                    document.querySelectorAll('.has-submenu').forEach(otherParent => {
+                        if (otherParent !== parent) {
+                            otherParent.classList.remove('active');
+                        }
+                    });
                 }
             });
+        });
+        
+        // Close mobile submenus when clicking elsewhere
+        document.addEventListener('click', function(e) {
+            if (window.innerWidth <= 768 && 
+                !e.target.closest('.has-submenu') &&
+                !e.target.closest('.menu-toggle-label')) {
+                document.querySelectorAll('.has-submenu').forEach(parent => {
+                    parent.classList.remove('active');
+                });
+            }
         });
     }
     
@@ -119,16 +137,22 @@ document.addEventListener('DOMContentLoaded', function() {
             window.searched = false;
         }
         
-        searchSubmit.addEventListener('click', performSearch);
-        searchInput.addEventListener('keypress', function(e) {
-            if (e.key === 'Enter') {
-                performSearch();
-            }
-        });
+        if (searchSubmit) {
+            searchSubmit.addEventListener('click', performSearch);
+        }
+        
+        if (searchInput) {
+            searchInput.addEventListener('keypress', function(e) {
+                if (e.key === 'Enter') {
+                    performSearch();
+                }
+            });
+        }
         
         // Close search when clicking outside
         document.addEventListener('click', function(e) {
             if (!searchOverlay.hidden && 
+                searchOverlay && 
                 !searchOverlay.contains(e.target) && 
                 !searchIcon.contains(e.target)) {
                 searchOverlay.hidden = true;
@@ -136,21 +160,65 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Add smooth scrolling for anchor links
+    // News Filter functionality (for aktualnosci.html)
+    const newsFilter = document.getElementById('newsFilter');
+    if (newsFilter) {
+        newsFilter.addEventListener('change', function() {
+            const selectedMonth = this.value;
+            const newsItems = document.querySelectorAll('.news-list-item');
+            
+            newsItems.forEach(item => {
+                if (selectedMonth === 'all' || item.getAttribute('data-month') === selectedMonth) {
+                    item.classList.remove('news-hidden');
+                } else {
+                    item.classList.add('news-hidden');
+                }
+            });
+        });
+    }
+    
+    // Add smooth scrolling for anchor links (including hash links to sections)
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
             
             if (href !== '#') {
                 e.preventDefault();
-                const targetElement = document.querySelector(href);
+                const targetId = href.substring(1);
+                let targetElement;
+                
+                // Если ссылка ведет на якорь на той же странице
+                if (targetId) {
+                    targetElement = document.getElementById(targetId);
+                }
                 
                 if (targetElement) {
                     window.scrollTo({
                         top: targetElement.offsetTop - 100,
                         behavior: 'smooth'
                     });
+                    
+                    // Закрываем мобильное меню после клика
+                    if (window.innerWidth <= 768 && mainNav && mainNav.classList.contains('active')) {
+                        menuToggle.classList.remove('active');
+                        mainNav.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
                 }
+            }
+        });
+    });
+    
+    // Handle links to sections on other pages
+    document.querySelectorAll('a[href*="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // Если ссылка ведет на якорь на другой странице
+            if (href.includes('#') && !href.startsWith(window.location.pathname)) {
+                // Разрешаем стандартное поведение - переход на другую страницу
+                // Браузер сам обработает переход и скролл к якорю
+                return;
             }
         });
     });
