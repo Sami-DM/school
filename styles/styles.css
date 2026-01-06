@@ -122,12 +122,13 @@ a:hover {
 }
 
 .search-icon {
-    background: none;
-    border: none;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: var(--radius);
+    /* Увеличим размер в 2 раза */
+    font-size: 1.5rem; /* было 1.2rem */
+    /* Выровняем по вертикали */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px; /* Примерная высота, чтобы соответствовать высоте текста */
 }
 
 .search-icon:hover {
@@ -175,6 +176,10 @@ a:hover {
 }
 
 .bip-link {
+        /* Убедимся, что выравнивание по вертикали */
+    display: flex;
+    align-items: center;
+    height: 40px; /* Такая же высота, как у лупы */
     font-weight: 700;
     padding: 8px 15px;
     border-radius: var(--radius);
@@ -236,6 +241,10 @@ a:hover {
     background-color: var(--color-primary);
     border-radius: 3px;
     transition: 0.3s;
+}
+
+.menu-close {
+    display: none; /* По умолчанию скрыт */
 }
 
 /* Main Navigation */
@@ -744,6 +753,11 @@ a:hover {
         border-bottom: none;
     }
     
+
+    .menu-close {
+        display: block; /* Показываем только на мобильных */
+    }
+
     .submenu {
         position: static;
         opacity: 1;
@@ -818,6 +832,7 @@ a:hover {
     .section {
         margin-bottom: 60px;
     }
+
 
 }
 
@@ -1343,3 +1358,87 @@ details[open] summary::after {
 .mb-30 { margin-bottom: 30px; }
 .mb-40 { margin-bottom: 40px; }
 .mt-40 { margin-top: 40px; }
+
+/* ===== ИСПРАВЛЕНИЯ ПОСЛЕ РЕВЬЮ ===== */
+
+/* Увеличиваем значок поиска в 2 раза и выравниваем */
+.search-icon {
+    font-size: 1.8rem; /* Увеличено в 2 раза */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px 10px; /* Увеличено для лучшего нажатия */
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 48px; /* Выровнено по высоте с текстом */
+    min-width: 48px;
+    transition: background-color 0.3s ease;
+}
+
+.search-icon:hover {
+    background-color: rgba(139, 21, 56, 0.1);
+}
+
+/* Кнопка BIP выровнена по тексту */
+.bip-link {
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    background-color: var(--color-primary);
+    color: white !important;
+    display: flex;
+    align-items: center;
+    height: 48px; /* Такая же высота как у поиска */
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+}
+
+.bip-link:hover {
+    background-color: #6d102b;
+    color: white !important;
+}
+
+/* Убираем странный крестик в меню для ПК */
+.menu-close {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        color: var(--color-primary);
+        cursor: pointer;
+        z-index: 1002;
+    }
+}
+
+/* Выравнивание элементов в верхней панели */
+.top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Мобильная версия верхней панели */
+@media (max-width: 768px) {
+    .search-icon {
+        font-size: 1.5rem;
+        height: 44px;
+        min-width: 44px;
+        padding: 6px 8px;
+    }
+    
+    .bip-link {
+        padding: 8px 15px;
+        height: 44px;
+        font-size: 0.9rem;
+    }
+}
