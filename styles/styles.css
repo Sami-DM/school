@@ -1441,4 +1441,106 @@ details[open] summary::after {
         height: 44px;
         font-size: 0.9rem;
     }
+
+}
+
+
+/* ===== ИСПРАВЛЕНИЯ ВЫПАДАЮЩЕГО МЕНЮ ===== */
+/* Десктопное меню с hover */
+@media (min-width: 769px) {
+    .has-submenu {
+        position: relative;
+    }
+    
+    .submenu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background: white;
+        min-width: 250px;
+        box-shadow: var(--shadow-hover);
+        border-radius: var(--radius);
+        list-style: none;
+        z-index: 1000;
+        padding: 10px 0;
+    }
+    
+    .has-submenu:hover .submenu {
+        display: block;
+    }
+    
+    .submenu li {
+        border-bottom: none;
+    }
+    
+    .submenu a {
+        display: block;
+        padding: 12px 20px;
+        color: var(--color-text-main);
+        white-space: nowrap;
+    }
+    
+    .submenu a:hover {
+        background-color: var(--color-bg-alt);
+        color: var(--color-primary);
+    }
+}
+
+/* Мобильное меню - подменю по клику */
+@media (max-width: 768px) {
+    .submenu {
+        display: none;
+        padding-left: 20px;
+    }
+    
+    .has-submenu.active .submenu {
+        display: block;
+    }
+}
+
+/* ===== ТОНКАЯ НАСТРОЙКА BIP ===== */
+.bip-link {
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    background-color: var(--color-primary);
+    color: white !important;
+    display: flex;
+    align-items: center;
+    height: 48px;
+    white-space: nowrap;
+    transition: background-color 0.3s ease;
+    margin-left: 10px;
+    line-height: 1;
+}
+
+/* ===== АККОРДЕОН ДОКУМЕНТОВ ===== */
+details {
+    background: #fff;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: var(--radius);
+    overflow: hidden;
+}
+
+details[open] {
+    border-color: var(--color-primary);
+}
+
+details:not([open]) summary::after {
+    content: '+';
+}
+
+details[open] summary::after {
+    content: '−';
+}
+
+/* Закрыть все кроме BIP по умолчанию */
+details:not(#bip) {
+    border-color: #ddd;
+}
+
+details:not(#bip)[open] {
+    border-color: var(--color-primary);
 }
