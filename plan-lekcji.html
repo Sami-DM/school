@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan lekcji - I LO im. M. Kopernika w Toruniu</title>
+    <meta name="description" content="Plan lekcji I Liceum Ogólnokształcącego im. Mikołaja Kopernika w Toruniu. Sprawdź rozkład zajęć dla wszystkich klas.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/logos/favicon.ico">
+    <style>
+        .timetable-container {
+            display: none;
+        }
+        
+        .timetable-container.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="coat-of-arms">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="coat-of-arms-poland">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum" class="coat-of-arms-school">
+                <span class="school-name-short">I LO Kopernika</span>
+                <span class="school-name-full">I Liceum Ogólnokształcące im. Mikołaja Kopernika</span>
+            </div>
+            
+            <div class="top-bar-right">
+                <div class="search-container">
+                    <button class="search-icon" aria-label="Otwórz wyszukiwarkę">🔍</button>
+                    <div class="search-overlay" id="searchOverlay" hidden>
+                        <input type="search" id="searchInput" placeholder="Szukaj na stronie..." aria-label="Wpisz szukaną frazę">
+                        <button type="button" id="searchSubmit">Szukaj</button>
+                        <button type="button" id="searchClose" aria-label="Zamknij wyszukiwarkę">✕</button>
+                    </div>
+                </div>
+                <a href="dokumenty.html#bip" class="bip-link">BIP</a>
+                <div class="accessibility-placeholder">
+                    <!-- Reserved for accessibility buttons -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="mobile-logo">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum">
+                <span>I LO Kopernika</span>
+            </div>
+
+            <div class="menu-toggle-label" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="main-nav" aria-label="Główne menu">
+                <ul class="main-menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="rekrutacja.html">Rekrutacja</a></li>
+                    <li class="has-submenu">
+                        <a href="o-szkole.html">O szkole</a>
+                        <ul class="submenu">
+                            <li><a href="o-szkole.html">O nas</a></li>
+                            <li><a href="historia.html">Historia</a></li>
+                            <li><a href="maintenance.html">Kadra</a></li>
+                            <li><a href="o-szkole.html#projekty">Projekty międzynarodowe</a></li>
+                            <li><a href="o-szkole.html#dzialania">Działania Jedynki</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="maintenance.html">Dla ucznia</a>
+                        <ul class="submenu">
+                            <li><a href="plan-lekcji.html" class="active">Plan lekcji</a></li>
+                            <li><a href="https://vulcan.net.pl/torun">Dziennik</a></li>
+                            <li><a href="maintenance.html">Podręczniki</a></li>
+                            <li><a href="maintenance.html">Pomoc psychologiczno-pedagogiczna</a></li>
+                            <li><a href="maintenance.html">ZFŚS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="maintenance.html">Matura</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="timetable-hero">
+        <div class="container">
+            <h1 class="hero-title">Plan lekcji</h1>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Class Selector -->
+        <section class="section class-selector">
+            <h2 class="section-title">Wybierz klasę</h2>
+            
+            <!-- Klasa 1 -->
+            <div class="class-group">
+                <h3>Klasa 1:</h3>
+                <div class="class-buttons">
+                    <button class="btn-class active" onclick="showTimetable('1A')">1A</button>
+                    <button class="btn-class" onclick="showTimetable('1B')">1B</button>
+                    <button class="btn-class" onclick="showTimetable('1C')">1C</button>
+                    <button class="btn-class" onclick="showTimetable('1D')">1D</button>
+                    <button class="btn-class" onclick="showTimetable('1E')">1E</button>
+                    <button class="btn-class" onclick="showTimetable('1F')">1F</button>
+                </div>
+            </div>
+            
+            <!-- Klasa 2 -->
+            <div class="class-group">
+                <h3>Klasa 2:</h3>
+                <div class="class-buttons">
+                    <button class="btn-class" onclick="showTimetable('2A')">2A</button>
+                    <button class="btn-class" onclick="showTimetable('2B')">2B</button>
+                    <button class="btn-class" onclick="showTimetable('2C')">2C</button>
+                    <button class="btn-class" onclick="showTimetable('2D')">2D</button>
+                    <button class="btn-class" onclick="showTimetable('2E')">2E</button>
+                    <button class="btn-class" onclick="showTimetable('2F')">2F</button>
+                </div>
+            </div>
+            
+            <!-- Klasa 3 -->
+            <div class="class-group">
+                <h3>Klasa 3:</h3>
+                <div class="class-buttons">
+                    <button class="btn-class" onclick="showTimetable('3A')">3A</button>
+                    <button class="btn-class" onclick="showTimetable('3B')">3B</button>
+                    <button class="btn-class" onclick="showTimetable('3C')">3C</button>
+                    <button class="btn-class" onclick="showTimetable('3D')">3D</button>
+                    <button class="btn-class" onclick="showTimetable('3E')">3E</button>
+                    <button class="btn-class" onclick="showTimetable('3F')">3F</button>
+                </div>
+            </div>
+            
+            <!-- Klasa 4 -->
+            <div class="class-group">
+                <h3>Klasa 4:</h3>
+                <div class="class-buttons">
+                    <button class="btn-class" onclick="showTimetable('4A')">4A</button>
+                    <button class="btn-class" onclick="showTimetable('4B')">4B</button>
+                    <button class="btn-class" onclick="showTimetable('4C')">4C</button>
+                    <button class="btn-class" onclick="showTimetable('4D')">4D</button>
+                    <button class="btn-class" onclick="showTimetable('4E')">4E</button>
+                    <button class="btn-class" onclick="showTimetable('4F')">4F</button>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Timetable Display -->
+        <section class="section">
+            <h2 class="section-title" id="timetableTitle">Plan lekcji: Klasa 1A</h2>
+            
+            <!-- Timetable for 1A -->
+            <div class="timetable-container active" id="timetable-1A">
+                <div class="table-responsive">
+                    <table class="timetable">
+                        <thead>
+                            <tr>
+                                <th>Godzina</th>
+                                <th>Poniedziałek</th>
+                                <th>Wtorek</th>
+                                <th>Środa</th>
+                                <th>Czwartek</th>
+                                <th>Piątek</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="time-cell">8:00-8:45</td>
+                                <td>Matematyka</td>
+                                <td>Język polski</td>
+                                <td>Historia</td>
+                                <td>Geografia</td>
+                                <td>Biologia</td>
+                            </tr>
+                            <tr>
+                                <td class="time-cell">8:55-9:40</td>
+                                <td>Język angielski</td>
+                                <td>Matematyka</td>
+                                <td>Wychowanie fizyczne</td>
+                                <td>Chemia</td>
+                                <td>Fizyka</td>
+                            </tr>
+                            <tr>
+                                <td class="time-cell">9:50-10:35</td>
+                                <td>Historia</td>
+                                <td>Geografia</td>
+                                <td>Język polski</td>
+                                <td>Matematyka</td>
+                                <td>Wychowanie fizyczne</td>
+                            </tr>
+                            <tr>
+                                <td class="time-cell">10:45-11:30</td>
+                                <td>WOS</td>
+                                <td>Biologia</td>
+                                <td>Język niemiecki</td>
+                                <td>Język angielski</td>
+                                <td>Informatyka</td>
+                            </tr>
+                            <tr>
+                                <td class="time-cell">11:50-12:35</td>
+                                <td>Godzina wychowawcza</td>
+                                <td>Chemia</td>
+                                <td>Matematyka</td>
+                                <td>Historia</td>
+                                <td>Język polski</td>
+                            </tr>
+                            <tr>
+                                <td class="time-cell">12:45-13:30</td>
+                                <td>Wychowanie fizyczne</td>
+                                <td>Religia/Etyka</td>
+                                <td>Geografia</td>
+                                <td>Język angielski</td>
+                                <td>Matematyka</td>
+                            </tr>
+                            <tr>
+                                <td class="time-cell">13:40-14:25</td>
+                                <td>-</td>
+                                <td>Informatyka</td>
+                                <td>Biologia</td>
+                                <td>WOS</td>
+                                <td>Chemia</td>
+                            </tr>
+                            <tr>
+                                <td class="time-cell">14:35-15:20</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>Język angielski</td>
+                                <td>Wychowanie fizyczne</td>
+                                <td>-</td>
+                            </tr>
+                            <tr>
+                                <td class="time-cell">15:30-16:15</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <!-- More timetable containers would go here for other classes -->
+            <!-- For demo, we'll just show one and others would be similar -->
+            
+            <div class="timetable-warning">
+                <p><strong>⚠️ Plan może ulec zmianie.</strong> Sprawdzaj regularnie dziennik elektroniczny.</p>
+                <a href="https://vulcan.net.pl/torun" class="btn-secondary" style="margin-top: 15px;">Dziennik elektroniczny →</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="footer-coat-of-arms">
+                <h3>I Liceum Ogólnokształcące<br>im. Mikołaja Kopernika</h3>
+                <address>
+                    ul. Kopernika 1<br>
+                    87-100 Toruń<br>
+                    <a href="tel:+48556677889">+48 55 667 78 89</a><br>
+                    <a href="mailto:sekretariat@lo1.torun.pl">sekretariat@lo1.torun.pl</a>
+                </address>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Menu</h4>
+                <ul class="footer-menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="rekrutacja.html">Rekrutacja</a></li>
+                    <li><a href="o-szkole.html">O szkole</a></li>
+                    <li><a href="maintenance.html">Dla ucznia</a></li>
+                    <li><a href="maintenance.html">Matura</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Dokumenty</h4>
+                <ul class="footer-menu">
+                    <li><a href="dokumenty.html">Statut szkoły</a></li>
+                    <li><a href="dokumenty.html">WSO</a></li>
+                    <li><a href="plan-lekcji.html">Plan lekcji</a></li>
+                    <li><a href="dokumenty.html">Dokumenty do pobrania</a></li>
+                    <li><a href="dokumenty.html#bip">BIP</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Social media</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/1lo.torun/" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://www.instagram.com/jedynkalo/" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://twitter.com/1lotorun/" aria-label="Twitter" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://www.tiktok.com/@ilotorun" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
+                    <a href="https://www.youtube.com/playlist?list=PLi3Vi7I5bT9Wuj6xYfnjpZS90qdz9r85e" aria-label="YouTube" target="_blank" rel="noopener">YouTube</a>
+                </div>
+                <p class="copyright">© 2026 I LO im. M. Kopernika w Toruniu<br>Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Timetable Switching Function
+        function showTimetable(className) {
+            // Update active button
+            document.querySelectorAll('.btn-class').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === className) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Update title
+            document.getElementById('timetableTitle').textContent = `Plan lekcji: Klasa ${className}`;
+            
+            // In a real implementation, you would show the correct timetable
+            // For now, we'll just show a message that we're showing 1A
+            alert(`Wyświetlanie planu dla klasy ${className}. W pełnej wersji każda klasa miałaby swój własny plan.`);
+        }
+        
+        // Main menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle-label');
+            const mainNav = document.querySelector('.main-nav');
+            
+            if (menuToggle && mainNav) {
+                const menuClose = document.createElement('button');
+                menuClose.className = 'menu-close';
+                menuClose.innerHTML = '✕';
+                menuClose.setAttribute('aria-label', 'Zamknij menu');
+                mainNav.appendChild(menuClose);
+
+                menuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                    document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+                });
+
+                menuClose.addEventListener('click', function() {
+                    menuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+
+                // Mobile submenu toggle
+                const submenuParents = document.querySelectorAll('.has-submenu > a');
+                submenuParents.forEach(item => {
+                    item.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            const parent = this.parentElement;
+                            parent.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
