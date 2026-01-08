@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podręczniki - I LO im. M. Kopernika w Toruniu</title>
+    <meta name="description" content="Lista podręczników na rok szkolny 2025/2026 dla I Liceum Ogólnokształcącego im. Mikołaja Kopernika w Toruniu.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/logos/favicon.ico">
+    <style>
+        .class-section {
+            display: none;
+        }
+        
+        .class-section.active {
+            display: block;
+        }
+        
+        .class-group {
+            display: none;
+        }
+        
+        .class-group.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="coat-of-arms">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="coat-of-arms-poland">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum" class="coat-of-arms-school">
+                <span class="school-name-short">I LO Kopernika</span>
+                <span class="school-name-full">I Liceum Ogólnokształcące im. Mikołaja Kopernika</span>
+            </div>
+            
+            <div class="top-bar-right">
+                <div class="search-container">
+                    <button class="search-icon" aria-label="Otwórz wyszukiwarkę">🔍</button>
+                    <div class="search-overlay" id="searchOverlay" hidden>
+                        <input type="search" id="searchInput" placeholder="Szukaj na stronie..." aria-label="Wpisz szukaną frazę">
+                        <button type="button" id="searchSubmit">Szukaj</button>
+                        <button type="button" id="searchClose" aria-label="Zamknij wyszukiwarkę">✕</button>
+                    </div>
+                </div>
+                <a href="dokumenty.html#bip" class="bip-link">BIP</a>
+                <div class="accessibility-placeholder">
+                    <!-- Reserved for accessibility buttons -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="mobile-logo">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum">
+                <span>I LO Kopernika</span>
+            </div>
+
+            <div class="menu-toggle-label" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="main-nav" aria-label="Główne menu">
+                <ul class="main-menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="rekrutacja.html">Rekrutacja</a></li>
+                    <li class="has-submenu">
+                        <a href="o-szkole.html">O szkole</a>
+                        <ul class="submenu">
+                            <li><a href="o-szkole.html">O nas</a></li>
+                            <li><a href="historia.html">Historia</a></li>
+                            <li><a href="kadra.html">Kadra</a></li>
+                            <li><a href="o-szkole.html#projekty">Projekty międzynarodowe</a></li>
+                            <li><a href="o-szkole.html#dzialania">Działania Jedynki</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="maintenance.html">Dla ucznia</a>
+                        <ul class="submenu">
+                            <li><a href="plan-lekcji.html">Plan lekcji</a></li>
+                            <li><a href="https://vulcan.net.pl/torun">Dziennik</a></li>
+                            <li><a href="podreczniki.html" class="active">Podręczniki</a></li>
+                            <li><a href="pomoc.html">Pomoc psychologiczno-pedagogiczna</a></li>
+                            <li><a href="zfss.html">ZFŚS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="matura.html">Matura</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="podreczniki-hero">
+        <div class="container">
+            <h1 class="hero-title">Podręczniki</h1>
+            <p class="hero-subtitle">Lista obowiązujących podręczników na rok szkolny 2025/2026.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Informacje ogólne -->
+        <section class="section">
+            <h2 class="section-title">Ważne informacje</h2>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="why-item">
+                    <span class="why-icon">📚</span>
+                    <div>
+                        <h3>Podręczniki są płatne</h3>
+                        <p>Zakupu dokonują rodzice/uczniowie.</p>
+                    </div>
+                </div>
+                
+                <div class="why-item">
+                    <span class="why-icon">📋</span>
+                    <div>
+                        <h3>Lista podręczników jest ustalana przez nauczycieli</h3>
+                        <p>Zgodnie z programem nauczania.</p>
+                    </div>
+                </div>
+                
+                <div class="why-item">
+                    <span class="why-icon">⚠️</span>
+                    <div>
+                        <h3>Różne klasy i profile mogą mieć różne zestawy podręczników</h3>
+                        <p>Sprawdź listę dla swojej klasy i profilu poniżej.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Wybór klasy -->
+        <section class="section">
+            <h2 class="section-title">Wybierz klasę</h2>
+            
+            <div style="max-width: 600px; margin: 0 auto;">
+                <button class="class-btn active" onclick="showClassSection('klasa1')">Klasa 1</button>
+                <button class="class-btn" onclick="showClassSection('klasa2')">Klasa 2</button>
+                <button class="class-btn" onclick="showClassSection('klasa3')">Klasa 3</button>
+                <button class="class-btn" onclick="showClassSection('klasa4')">Klasa 4</button>
+            </div>
+        </section>
+
+        <!-- Klasa 1 -->
+        <section class="class-section active" id="klasa1">
+            <div class="section">
+                <h2 class="section-title">Podręczniki — Klasa 1</h2>
+                <p style="text-align: center; margin-bottom: 30px;">Wybierz oddział:</p>
+                
+                <div style="text-align: center; margin-bottom: 40px;">
+                    <button class="btn-class class-btn-small" onclick="showClassGroup('1A')">1A</button>
+                    <button class="btn-class class-btn-small" onclick="showClassGroup('1B')">1B</button>
+                    <button class="btn-class class-btn-small" onclick="showClassGroup('1C')">1C</button>
+                    <button class="btn-class class-btn-small" onclick="showClassGroup('1D')">1D</button>
+                    <button class="btn-class class-btn-small" onclick="showClassGroup('1E')">1E</button>
+                    <button class="btn-class class-btn-small" onclick="showClassGroup('1F')">1F</button>
+                </div>
+                
+                <!-- Klasa 1A -->
+                <div class="class-group active" id="class-1A">
+                    <h3 style="text-align: center; color: var(--color-primary); margin-bottom: 30px;">Klasa 1A</h3>
+                    
+                    <div style="text-align: center; margin-bottom: 30px;">
+                        <a href="maintenance.html" class="btn-primary" style="display: inline-block;">
+                            📄 Pobierz pełną listę PDF dla klasy 1A
+                        </a>
+                    </div>
+                    
+                    <h4 style="text-align: center; margin-bottom: 20px;">Podgląd listy:</h4>
+                    
+                    <div class="pdf-preview">
+                        <div>
+                            <div style="font-size: 3rem; color: var(--color-text-light); margin-bottom: 20px;">📚</div>
+                            <p>Podgląd listy podręczników dla klasy 1A</p>
+                            <p style="color: var(--color-text-light); margin-top: 15px;">
+                                W pełnej wersji tutaj byłby embedded PDF lub iframe z listą podręczników
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Other classes would be similar -->
+                <div class="class-group" id="class-1B" style="display: none;">
+                    <h3 style="text-align: center; color: var(--color-primary); margin-bottom: 30px;">Klasa 1B</h3>
+                    <!-- Similar structure for other classes -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Other class sections (hidden by default) -->
+        <section class="class-section" id="klasa2" style="display: none;">
+            <div class="section">
+                <h2 class="section-title">Podręczniki — Klasa 2</h2>
+                <p style="text-align: center;">Lista podręczników dla klasy 2 będzie dostępna wkrótce.</p>
+            </div>
+        </section>
+        
+        <section class="class-section" id="klasa3" style="display: none;">
+            <div class="section">
+                <h2 class="section-title">Podręczniki — Klasa 3</h2>
+                <p style="text-align: center;">Lista podręczników dla klasy 3 będzie dostępna wkrótce.</p>
+            </div>
+        </section>
+        
+        <section class="class-section" id="klasa4" style="display: none;">
+            <div class="section">
+                <h2 class="section-title">Podręczniki — Klasa 4</h2>
+                <p style="text-align: center;">Lista podręczników dla klasy 4 będzie dostępna wkrótce.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="footer-coat-of-arms">
+                <h3>I Liceum Ogólnokształcące<br>im. Mikołaja Kopernika</h3>
+                <address>
+                    ul. Kopernika 1<br>
+                    87-100 Toruń<br>
+                    <a href="tel:+48556677889">+48 55 667 78 89</a><br>
+                    <a href="mailto:sekretariat@lo1.torun.pl">sekretariat@lo1.torun.pl</a>
+                </address>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Menu</h4>
+                <ul class="footer-menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="rekrutacja.html">Rekrutacja</a></li>
+                    <li><a href="o-szkole.html">O szkole</a></li>
+                    <li><a href="maintenance.html">Dla ucznia</a></li>
+                    <li><a href="matura.html">Matura</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Dokumenty</h4>
+                <ul class="footer-menu">
+                    <li><a href="dokumenty.html">Statut szkoły</a></li>
+                    <li><a href="dokumenty.html">WSO</a></li>
+                    <li><a href="plan-lekcji.html">Plan lekcji</a></li>
+                    <li><a href="dokumenty.html">Dokumenty do pobrania</a></li>
+                    <li><a href="dokumenty.html#bip">BIP</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Social media</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/1lo.torun/" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://www.instagram.com/jedynkalo/" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://twitter.com/1lotorun/" aria-label="Twitter" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://www.tiktok.com/@ilotorun" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
+                    <a href="https://www.youtube.com/playlist?list=PLi3Vi7I5bT9Wuj6xYfnjpZS90qdz9r85e" aria-label="YouTube" target="_blank" rel="noopener">YouTube</a>
+                </div>
+                <p class="copyright">© 2026 I LO im. M. Kopernika w Toruniu<br>Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Class selection functionality
+        function showClassSection(classId) {
+            // Update active button
+            document.querySelectorAll('.class-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            // Hide all sections
+            document.querySelectorAll('.class-section').forEach(section => {
+                section.style.display = 'none';
+            });
+            
+            // Show selected section
+            document.getElementById(classId).style.display = 'block';
+            
+            // Scroll to section
+            document.getElementById(classId).scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+        
+        function showClassGroup(className) {
+            // Update active small buttons
+            const container = document.getElementById('klasa1');
+            container.querySelectorAll('.class-btn-small').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.textContent === className) {
+                    btn.classList.add('active');
+                }
+            });
+            
+            // Hide all class groups
+            container.querySelectorAll('.class-group').forEach(group => {
+                group.style.display = 'none';
+            });
+            
+            // Show selected class group
+            document.getElementById('class-' + className).style.display = 'block';
+        }
+        
+        // Main menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle-label');
+            const mainNav = document.querySelector('.main-nav');
+            
+            if (menuToggle && mainNav) {
+                const menuClose = document.createElement('button');
+                menuClose.className = 'menu-close';
+                menuClose.innerHTML = '✕';
+                menuClose.setAttribute('aria-label', 'Zamknij menu');
+                mainNav.appendChild(menuClose);
+
+                menuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                    document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+                });
+
+                menuClose.addEventListener('click', function() {
+                    menuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+
+                // Mobile submenu toggle
+                const submenuParents = document.querySelectorAll('.has-submenu > a');
+                submenuParents.forEach(item => {
+                    item.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            const parent = this.parentElement;
+                            parent.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
