@@ -226,3 +226,38 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize any other functionality
     console.log('I LO Kopernika website loaded successfully');
 });
+
+// Timetable functionality
+function showTimetable(className) {
+    // Remove active class from all buttons
+    document.querySelectorAll('.btn-class').forEach(btn => {
+        btn.classList.remove('active');
+    });
+    
+    // Add active class to clicked button
+    event.target.classList.add('active');
+    
+    // Update title
+    document.getElementById('timetableTitle').textContent = `Plan lekcji: Klasa ${className}`;
+    
+    // Hide all timetables
+    document.querySelectorAll('.timetable-container').forEach(container => {
+        container.classList.remove('active');
+    });
+    
+    // Show selected timetable (in real implementation, you would have separate containers)
+    // For demo, we'll just show the first one
+    const selectedTimetable = document.getElementById(`timetable-${className}`);
+    if (selectedTimetable) {
+        selectedTimetable.classList.add('active');
+    } else {
+        // If timetable doesn't exist, show the first one
+        document.querySelector('.timetable-container').classList.add('active');
+    }
+    
+    // Scroll to timetable
+    document.getElementById('timetableTitle').scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+    });
+}
