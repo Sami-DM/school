@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kadra pedagogiczna - I LO im. M. Kopernika w Toruniu</title>
+    <meta name="description" content="Kadra pedagogiczna I Liceum Ogólnokształcącego im. Mikołaja Kopernika w Toruniu. Poznaj naszych nauczycieli.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/logos/favicon.ico">
+    <style>
+        .photo-funny {
+            display: none;
+        }
+        
+        .photo-funny.show {
+            display: block;
+        }
+        
+        .photo-normal.hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container top-bar-container">
+            <div class="coat-of-arms">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="coat-of-arms-poland">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum" class="coat-of-arms-school">
+                <span class="school-name-short">I LO Kopernika</span>
+                <span class="school-name-full">I Liceum Ogólnokształcące im. Mikołaja Kopernika</span>
+            </div>
+            
+            <div class="top-bar-right">
+                <div class="search-container">
+                    <button class="search-icon" aria-label="Otwórz wyszukiwarkę">🔍</button>
+                    <div class="search-overlay" id="searchOverlay" hidden>
+                        <input type="search" id="searchInput" placeholder="Szukaj na stronie..." aria-label="Wpisz szukaną frazę">
+                        <button type="button" id="searchSubmit">Szukaj</button>
+                        <button type="button" id="searchClose" aria-label="Zamknij wyszukiwarkę">✕</button>
+                    </div>
+                </div>
+                <a href="dokumenty.html#bip" class="bip-link">BIP</a>
+                <div class="accessibility-placeholder">
+                    <!-- Reserved for accessibility buttons -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
+    <header class="main-header">
+        <div class="container header-container">
+            <div class="mobile-logo">
+                <img src="assets/logos/logo_school.png" alt="Herb Liceum">
+                <span>I LO Kopernika</span>
+            </div>
+
+            <div class="menu-toggle-label" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <nav class="main-nav" aria-label="Główne menu">
+                <ul class="main-menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="rekrutacja.html">Rekrutacja</a></li>
+                    <li class="has-submenu">
+                        <a href="o-szkole.html">O szkole</a>
+                        <ul class="submenu">
+                            <li><a href="o-szkole.html">O nas</a></li>
+                            <li><a href="historia.html">Historia</a></li>
+                            <li><a href="kadra.html" class="active">Kadra</a></li>
+                            <li><a href="o-szkole.html#projekty">Projekty międzynarodowe</a></li>
+                            <li><a href="o-szkole.html#dzialania">Działania Jedynki</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="maintenance.html">Dla ucznia</a>
+                        <ul class="submenu">
+                            <li><a href="plan-lekcji.html">Plan lekcji</a></li>
+                            <li><a href="https://vulcan.net.pl/torun">Dziennik</a></li>
+                            <li><a href="podreczniki.html">Podręczniki</a></li>
+                            <li><a href="pomoc.html">Pomoc psychologiczno-pedagogiczna</a></li>
+                            <li><a href="zfss.html">ZFŚS</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="matura.html">Matura</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="kadra-hero">
+        <div class="container">
+            <h1 class="hero-title">Kadra pedagogiczna</h1>
+            <p class="hero-subtitle">Poznaj zespół nauczycieli I Liceum Ogólnokształcącego im. Mikołaja Kopernika.</p>
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- Zdjęcia zespołu -->
+        <section class="section">
+            <h2 class="section-title">Nasz zespół</h2>
+            
+            <!-- Rok 2023/2024 -->
+            <div class="staff-group-container">
+                <h3>Rok szkolny 2023/2024</h3>
+                
+                <img src="assets/images/kadra_2024_normal.jpg" alt="Zespół nauczycieli 2023/2024 - zdjęcie oficjalne" class="photo-normal show">
+                <img src="assets/images/kadra_2024_funny.jpg" alt="Zespół nauczycieli 2023/2024 - zdjęcie zabawne" class="photo-funny hide">
+                
+                <button class="btn-toggle-fun" onclick="toggleFun(this, '2024')">
+                    😊 Zobacz więcej zdjęć
+                </button>
+                
+                <p style="margin-top: 15px; color: var(--color-text-light);">
+                    📷 Zdjęcia wykonała firma "Vega"
+                </p>
+            </div>
+
+            <div class="section-divider"></div>
+
+            <!-- Rok 2022/2023 -->
+            <div class="staff-group-container">
+                <h3>Rok szkolny 2022/2023</h3>
+                
+                <img src="assets/images/kadra_2023_normal.jpg" alt="Zespół nauczycieli 2022/2023 - zdjęcie oficjalne" class="photo-normal show">
+                <img src="assets/images/kadra_2023_funny.jpg" alt="Zespół nauczycieli 2022/2023 - zdjęcie zabawne" class="photo-funny hide">
+                
+                <button class="btn-toggle-fun" onclick="toggleFun(this, '2023')">
+                    😊 Zobacz więcej zdjęć
+                </button>
+                
+                <p style="margin-top: 15px; color: var(--color-text-light);">
+                    📷 Zdjęcia wykonała firma "Vega"
+                </p>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!-- Kontakt do kluczowych osób -->
+        <section class="section">
+            <h2 class="section-title">Kontakt</h2>
+            
+            <div class="contact-cards">
+                <div class="contact-card">
+                    <div class="contact-icon">🏫</div>
+                    <h3>Dyrekcja szkoły</h3>
+                    <p>📞 56 622-79-33</p>
+                    <p>📧 sekretariat@lo1.edu.torun.pl</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">📚</div>
+                    <h3>Biblioteka</h3>
+                    <p>📧 biblioteka@lo1.edu.torun.pl</p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">💚</div>
+                    <h3>Pomoc psychologiczno-pedagogiczna</h3>
+                    <a href="pomoc.html" class="btn-secondary" style="margin-top: 15px; display: inline-block;">
+                        Zobacz pełne informacje →
+                    </a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">💼</div>
+                    <h3>Sekretariat</h3>
+                    <p>🕐 Poniedziałek-Piątek: 8:00-15:00</p>
+                    <p>📞 56 622-79-33</p>
+                    <p>📧 sekretariat@lo1.edu.torun.pl</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <img src="assets/logos/logo_poland.png" alt="Herb Polski" class="footer-coat-of-arms">
+                <h3>I Liceum Ogólnokształcące<br>im. Mikołaja Kopernika</h3>
+                <address>
+                    ul. Kopernika 1<br>
+                    87-100 Toruń<br>
+                    <a href="tel:+48556677889">+48 55 667 78 89</a><br>
+                    <a href="mailto:sekretariat@lo1.torun.pl">sekretariat@lo1.torun.pl</a>
+                </address>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Menu</h4>
+                <ul class="footer-menu">
+                    <li><a href="index.html">Strona główna</a></li>
+                    <li><a href="rekrutacja.html">Rekrutacja</a></li>
+                    <li><a href="o-szkole.html">O szkole</a></li>
+                    <li><a href="maintenance.html">Dla ucznia</a></li>
+                    <li><a href="matura.html">Matura</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Dokumenty</h4>
+                <ul class="footer-menu">
+                    <li><a href="dokumenty.html">Statut szkoły</a></li>
+                    <li><a href="dokumenty.html">WSO</a></li>
+                    <li><a href="plan-lekcji.html">Plan lekcji</a></li>
+                    <li><a href="dokumenty.html">Dokumenty do pobrania</a></li>
+                    <li><a href="dokumenty.html#bip">BIP</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h4>Social media</h4>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/1lo.torun/" aria-label="Facebook" target="_blank" rel="noopener">Facebook</a>
+                    <a href="https://www.instagram.com/jedynkalo/" aria-label="Instagram" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://twitter.com/1lotorun/" aria-label="Twitter" target="_blank" rel="noopener">Twitter</a>
+                    <a href="https://www.tiktok.com/@ilotorun" aria-label="TikTok" target="_blank" rel="noopener">TikTok</a>
+                    <a href="https://www.youtube.com/playlist?list=PLi3Vi7I5bT9Wuj6xYfnjpZS90qdz9r85e" aria-label="YouTube" target="_blank" rel="noopener">YouTube</a>
+                </div>
+                <p class="copyright">© 2026 I LO im. M. Kopernika w Toruniu<br>Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Toggle fun photos
+        function toggleFun(button, year) {
+            const container = button.parentElement;
+            const normalPhoto = container.querySelector('.photo-normal');
+            const funnyPhoto = container.querySelector('.photo-funny');
+            
+            if (normalPhoto.classList.contains('show')) {
+                normalPhoto.classList.remove('show');
+                normalPhoto.classList.add('hide');
+                funnyPhoto.classList.remove('hide');
+                funnyPhoto.classList.add('show');
+                button.innerHTML = '😊 Pokaż oficjalne zdjęcie';
+            } else {
+                funnyPhoto.classList.remove('show');
+                funnyPhoto.classList.add('hide');
+                normalPhoto.classList.remove('hide');
+                normalPhoto.classList.add('show');
+                button.innerHTML = '😊 Zobacz więcej zdjęć';
+            }
+        }
+        
+        // Main menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.querySelector('.menu-toggle-label');
+            const mainNav = document.querySelector('.main-nav');
+            
+            if (menuToggle && mainNav) {
+                const menuClose = document.createElement('button');
+                menuClose.className = 'menu-close';
+                menuClose.innerHTML = '✕';
+                menuClose.setAttribute('aria-label', 'Zamknij menu');
+                mainNav.appendChild(menuClose);
+
+                menuToggle.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                    mainNav.classList.toggle('active');
+                    document.body.style.overflow = mainNav.classList.contains('active') ? 'hidden' : '';
+                });
+
+                menuClose.addEventListener('click', function() {
+                    menuToggle.classList.remove('active');
+                    mainNav.classList.remove('active');
+                    document.body.style.overflow = '';
+                });
+
+                // Mobile submenu toggle
+                const submenuParents = document.querySelectorAll('.has-submenu > a');
+                submenuParents.forEach(item => {
+                    item.addEventListener('click', function(e) {
+                        if (window.innerWidth <= 768) {
+                            e.preventDefault();
+                            const parent = this.parentElement;
+                            parent.classList.toggle('active');
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
